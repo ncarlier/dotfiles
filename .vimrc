@@ -3,6 +3,7 @@ set nocompatible
 set laststatus=2
 set number
 set ruler
+set mouse=a
 syntax on
 
 " load the plugin and indent settings for the detected filetype
