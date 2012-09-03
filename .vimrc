@@ -33,27 +33,33 @@ set cursorline
 
 " Whitespace stuff
 set nowrap
-set expandtab
+"set expandtab
 set backspace=indent,eol,start
 set list
 set listchars=tab:\ \ ,trail:·,nbsp:_,extends:>,precedes:<
 
 " 4 spaces tabs
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+"set tabstop=4
+"set softtabstop=4
+"set shiftwidth=4
 
 " Move easily between windows
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+map <C-Left> <C-w>h
+map <C-Down> <C-w>j
+map <C-Up> <C-w>k
+map <C-Right> <C-w>l
+map <F2> :NERDTreeToggle <CR>
+
+" tab navigation like firefox
+nnoremap <silent> <A-Left>  :tabprevious<CR>
+nnoremap <silent> <A-Right> :tabnext<CR>
+nnoremap <silent> <C-t>     :tabnew<CR>
+inoremap <silent> <A-Left>  <Esc>:tabprevious<CR>
+inoremap <silent> <A-Right> <Esc>:tabnext<CR>
+inoremap <silent> <C-t>     <Esc>:tabnew<CR>
 
 " Avoid 'escaping' from home row
 imap jj <Esc>
-
-" Open NERDTree if no file specified
-autocmd vimenter * if !argc() | NERDTree | endif
 
 " Powerline
 let g:Powerline_symbols = 'compatible'
