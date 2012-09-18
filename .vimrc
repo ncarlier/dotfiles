@@ -6,6 +6,8 @@ set ruler
 set mouse=a
 syntax on
 
+let mapleader = ","
+
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
 
@@ -21,6 +23,10 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+
+if has('gui_running')
+	set guifont=Monospace\ 12
+endif
 
 " Tab completion
 set wildmode=list:longest,list:full
@@ -61,9 +67,12 @@ inoremap <silent> <C-t>     <Esc>:tabnew<CR>
 
 " Avoid 'escaping' from home row
 imap jj <Esc>
+imap <C-Space> <C-X><C-O>
 
 " Powerline
 let g:Powerline_symbols = 'compatible'
 
-" CtrlP, don’t manage working directory
+" CtrlP, don’t manage working directoryu
 let g:ctrlp_working_path_mode = 0
+
+autocmd! BufNewFile,BufRead *.ino setlocal ft=arduino
