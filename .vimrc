@@ -3,10 +3,16 @@ set nocompatible
 set laststatus=2
 set number
 set ruler
-set mouse=a
 syntax on
 
 let mapleader = ","
+
+" Mouse
+set mouse+=a
+if &term =~ '^screen'
+    " tmux knows the extended mouse mode
+    set ttymouse=xterm2
+endif
 
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
@@ -46,9 +52,10 @@ set list
 set listchars=tab:\ \ ,trail:·,nbsp:_,extends:>,precedes:<
 
 " 4 spaces tabs
-"set tabstop=4
-"set softtabstop=4
-"set shiftwidth=4
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 " Move easily between windows
 map <C-Left> <C-w>h
