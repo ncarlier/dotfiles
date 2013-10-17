@@ -1,3 +1,11 @@
 [user]
-	name = Nicolas Carlier
-	email = n.carlier@nunux.org
+    name    = Nicolas Carlier
+    email   = n.carlier@nunux.org
+[color]
+    ui      = true
+[alias]
+    st      = status -sb
+    lol     = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola    = log --graph --decorate --pretty=oneline --abbrev-commit --all
+[push]
+	default = simple
