@@ -31,7 +31,9 @@ Bundle 'edsono/vim-matchit'
 " Buffer Navigation
 Bundle 'jeetsukumaran/vim-buffergator'
 " Javascript support
+"Bundle 'jelera/vim-javascript-syntax'
 Bundle 'pangloss/vim-javascript'
+Bundle 'nathanaelkane/vim-indent-guides'
 " Markdown support
 Bundle 'tpope/vim-markdown'
 " Coffee script support
@@ -58,6 +60,10 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'tomtom/tlib_vim'
 " Utility
 Bundle 'MarcWeber/vim-addon-mw-utils'
+" Dart
+Bundle 'dart-lang/dart-vim-plugin'
+" Automate closing qoat, brackets, etc.
+Bundle 'Raimondi/delimitMate'
 
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
@@ -115,6 +121,9 @@ let g:Powerline_symbols = 'compatible'
 " CtrlP
 let g:ctrlp_working_path_mode = 0 " don’t manage working directory
 let g:ctrlp_switch_buffer = 'et' "don't jump if the buffer is not in the current tab
+
+" Syntastic on opening file
+let g:syntastic_check_on_open=1
 
 " Mouse
 set mouse+=a
