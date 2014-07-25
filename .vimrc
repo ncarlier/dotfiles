@@ -1,3 +1,4 @@
+set notimeout
 set nocompatible
 set laststatus=2
 set number
@@ -64,6 +65,8 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'dart-lang/dart-vim-plugin'
 " Automate closing qoat, brackets, etc.
 Bundle 'Raimondi/delimitMate'
+" Go
+Bundle 'fatih/vim-go'
 
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
@@ -125,12 +128,20 @@ let g:ctrlp_switch_buffer = 'et' "don't jump if the buffer is not in the current
 " Syntastic on opening file
 let g:syntastic_check_on_open=1
 
+" Disable Go install
+let g:go_disable_autoinstall = 1
+
 " Mouse
 set mouse+=a
 if &term =~ '^screen'
     " tmux knows the extended mouse mode
     set ttymouse=xterm2
 endif
+if has("mouse_sgr")
+    set ttymouse=sgr
+else
+    set ttymouse=xterm2
+end
 
 if has('gui_running')
 	set guifont=Monospace\ 12
