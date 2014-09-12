@@ -67,6 +67,10 @@ Bundle 'dart-lang/dart-vim-plugin'
 Bundle 'Raimondi/delimitMate'
 " Go
 Bundle 'fatih/vim-go'
+" Yaml
+Bundle 'stephpy/vim-yaml'
+" Docker
+Bundle 'ekalinin/Dockerfile.vim'
 
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
