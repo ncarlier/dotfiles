@@ -26,7 +26,11 @@ alias tmux="nocorrect tmux"
 
 # general aliases
 alias ll="ls -lh --color"
+alias fl="fleetctl"
+alias flrestart="fleetctl stop $@ && fleetctl start $@"
 
 # vim as editor
 export EDITOR=vim
 
+# Fleet
+export FLEETCTL_TUNNEL=nunux.org:2210
