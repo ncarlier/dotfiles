@@ -28,6 +28,7 @@ alias tmux="nocorrect tmux"
 alias ll="ls -lh --color"
 alias fl="fleetctl"
 alias flrestart="fleetctl stop $@ && fleetctl start $@"
+alias docker="sudo /usr/local/bin/docker"
 
 # vim as editor
 export EDITOR=vim
