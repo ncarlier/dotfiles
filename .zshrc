@@ -21,14 +21,8 @@ if [ $TERM != "screen-256color" ]; then
     export TERM=xterm-256color
 fi
 
-# prevent autocorrect
-alias tmux="nocorrect tmux"
-
-# general aliases
-alias ll="ls -lh --color"
-alias fl="fleetctl"
-alias flrestart="fleetctl stop $@ && fleetctl start $@"
-alias docker="sudo /usr/local/bin/docker"
+# Aliases
+source $HOME/.bash_aliases
 
 # vim as editor
 export EDITOR=vim
