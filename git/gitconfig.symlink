@@ -1,10 +1,16 @@
+[core]
+    editor  = vim
 [user]
     name    = Nicolas Carlier
     email   = n.carlier@nunux.org
 [color]
+    diff    = auto
+    status  = auto
+    branch  = auto
     ui      = true
 [alias]
     st      = status -sb
+    co      = checkout
     lol     = log --graph --decorate --pretty=oneline --abbrev-commit
     lola    = log --graph --decorate --pretty=oneline --abbrev-commit --all
 [push]

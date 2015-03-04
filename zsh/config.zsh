@@ -1,6 +1,3 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -16,16 +13,11 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-# 256 colors
-if [ $TERM != "screen-256color" ]; then
-    export TERM=xterm-256color
-fi
+fpath=($DOTFILES/functions $fpath)
 
-# Aliases
-source $HOME/.bash_aliases
+autoload -U $DOTFILES/functions/*(:t)
 
-# vim as editor
-export EDITOR=vim
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
 
-# Fleet
-export FLEETCTL_TUNNEL=nunux.org:2210
