@@ -71,6 +71,8 @@ Bundle 'fatih/vim-go'
 Bundle 'stephpy/vim-yaml'
 " Docker
 Bundle 'ekalinin/Dockerfile.vim'
+" Asciidoc
+Bundle 'dagwieers/asciidoc-vim'
 
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
