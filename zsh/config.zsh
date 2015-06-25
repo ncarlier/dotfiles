@@ -21,6 +21,6 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
-if [ -d ~/bin ]; then
-    export PATH=$PATH:~/bin
+if [ -d ~/.local/bin ]; then
+    export PATH=$PATH:~/.local/bin
 fi
