@@ -172,8 +172,10 @@ inoremap <silent> <C-t>     <Esc>:tabnew<CR>
 
 " Enable spellchecking for Markdown
 autocmd FileType markdown setlocal spell
-" Automatically wrap at 80 characters for Markdown
+autocmd FileType rst setlocal spell
+" Automatically wrap at 80 characters for Markdown and reStructuredText
 autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+autocmd BufRead,BufNewFile *.rst setlocal textwidth=80
 
 " Make it obvious where 80 characters is
 set colorcolumn=+1
