@@ -28,8 +28,6 @@ Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/ZoomWin'
 " Statusline
 Bundle 'bling/vim-airline'
-" Char jumping
-Bundle 'edsono/vim-matchit'
 " Buffer Navigation
 Bundle 'jeetsukumaran/vim-buffergator'
 " Javascript support
@@ -40,8 +38,6 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'nathanaelkane/vim-indent-guides'
 " Markdown support
 Bundle 'tpope/vim-markdown'
-" Coffee script support
-Bundle 'kchmck/vim-coffee-script'
 " GIT support
 Bundle 'tpope/vim-git'
 " Ruby support
@@ -136,6 +132,7 @@ imap jj <Esc>
 " CtrlP
 let g:ctrlp_working_path_mode = 0 " don’t manage working directory
 let g:ctrlp_switch_buffer = 'et' "don't jump if the buffer is not in the current tab
+nmap <C-g> :CtrlP<CR><C-\>w
 
 " Syntastic on opening file
 let g:syntastic_check_on_open=1
@@ -143,8 +140,12 @@ let g:syntastic_check_on_open=1
 " JS Syntastic checkers
 let g:syntastic_javascript_checkers = ['eslint']
 
-" Disable Go install
-let g:go_disable_autoinstall = 1
+
+let g:go_fmt_command = "goimports"
+
+" Go Syntastic checkers
+let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
 " Mouse
 set mouse+=a
@@ -185,6 +186,14 @@ set complete+=kspell
 
 " Always use vertical diffs
 set diffopt+=vertical
+
+" Go related mappings
+au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>r <Plug>(go-run)
+au FileType go nmap <Leader>b <Plug>(go-build)
+au FileType go nmap <Leader>t <Plug>(go-test)
+au FileType go nmap gd <Plug>(go-def-tab)
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
