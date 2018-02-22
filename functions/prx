@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+# Set Proxy
+export {http,https,ftp}_proxy="http://proxy-internet.localnet:3128"
+export no_proxy="localhost,.priv.atos.fr,/var/run/docker.sock"
+env | grep proxy
+

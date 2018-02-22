@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+# Unset Proxy
+unset {http,https,ftp,no}_proxy
+unset {HTTP,HTTPS,FTP,NO}_PROXY
+env | grep proxy
