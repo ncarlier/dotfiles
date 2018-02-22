@@ -1,5 +1,6 @@
 # Listing aliases
-alias ls='ls --color=tty'
+alias ls='ls -G --color'
+#alias ls='ls --color=tty'
 alias ll='ls -lh'
 
 # Misc
